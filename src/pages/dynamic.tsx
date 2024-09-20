@@ -38,14 +38,14 @@ const Dynamic: NextPage = (props: {
       <h1 className="my-5">Como funcionam as renderizações do Next.js</h1>
       <Row>
         <Col>
-          <h3>Gerador no servidor:</h3>
+          <h3>Gerador no Servidor:</h3>
           <h2>
             {props.serverSideData?.timestamp &&
               new Date(props.serverSideData.timestamp).toLocaleString()}
           </h2>
         </Col>
         <Col>
-          <h3>Gerador no cliente:</h3>
+          <h3>Gerador no Cliente:</h3>
           <h2>
             {clientSideData?.timestamp &&
               new Date(clientSideData.timestamp).toLocaleString()}

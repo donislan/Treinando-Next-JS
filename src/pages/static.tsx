@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import { Container, Row, Col } from "reactstrap";
 import { useState, useEffect, ReactNode } from "react";
 
@@ -19,7 +19,10 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Static: NextPage = (props: { children?: ReactNode }) => {
+const Static: NextPage = (props: {
+  staticData?: ApiResponse;
+  children?: ReactNode;
+}) => {
   const [clientSideData, setClientSideData] = useState<ApiResponse>();
 
   useEffect(() => {
